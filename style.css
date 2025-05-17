@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#classroom-modal {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#classroom-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#classroom-modal:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #444444 #1c1c1c;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #444444;
+    border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+
+#chat-messages {
+    max-height: calc(100% - 60px);
+}
+
+#chat-messages p {
+    margin: 4px 0;
+}
+
+#chat-messages .user-message {
+    background-color: #0a4fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+#chat-messages .other-message {
+    background-color: #333333;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-right: 16px;
+    display: inline-block;
+}
+
+#test-modal {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#test-modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#test-modal:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video-container {
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    max-height: 100%;
+    width: auto;
+}
+
+@media (min-width: 640px) {
+    .video-container {
+        max-height: 70vh;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+    }
+}
+
+button, input[type="radio"] + label {
+    touch-action: manipulation;
+    min-height: 36px;
+}
+
+.MathJax_Display {
+    font-size: 0.9em !important;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+    .MathJax_Display {
+        font-size: 1em !important;
+    }
+}
